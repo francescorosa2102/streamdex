@@ -1,0 +1,59 @@
+# Un account TikTok per riga (SENZA la @).
+# Le righe che iniziano con # e le righe vuote vengono ignorate.
+# Stato aggiornato dopo la raccolta del 02/07/2026 (47 handle testati).
+
+# === ATTIVI: verificati funzionanti, con dati reali ===
+khaby.lame
+arnaldomangini
+paky__official
+mercuri_88
+gianlucavacchi
+urbantheory_
+jessibrugali
+lucianospinelli
+faffapix
+ceciliacantarano
+jakidale
+gabrielevagnato
+virginiamontemaggi
+ornellazocco          # piccolo (414 follower): verifica che sia la persona giusta
+madtrinity_           # molto piccolo (51 follower): verifica
+
+# === RISOLTI MA VUOTI ===
+# L'handle esiste ma e' un omonimo con ~0 follower: quasi certamente NON la
+# persona giusta. Trova l'handle corretto e riattiva la riga.
+# surry                # 0 follower, 0 video
+# mattia_stanga        # 49 follower  -> prova: mattiastanga
+# elisamaino           # 2 follower   -> prova: elisa.maino / _elisamaino
+# gaiabianchi          # 0 follower   -> omonimo, cerca l'handle giusto
+# valentinafradegrada  # 16 follower  -> prova: valentina_fradegrada
+# giuliasalemi         # 13 follower  -> prova: giulia_salemi / giuliasalemi_
+
+# === NON TROVATI: handle inesistente, da correggere o rimuovere ===
+# I "prova:" sono varianti plausibili da VERIFICARE, non certezze.
+# gzfoodqood           -> prova: gzfoodgood   (q al posto di g)
+# greg_goya            -> prova: greggoya / greg.goya
+# jacopoaquila         -> prova: jacopo_aquila / jacopo.aquila
+# kiroebra             -> incerto, cerca l'handle corretto
+# ilpagante            -> prova: ilpaganteofficial / ilpagante_
+# lorenzorisoo         -> prova: lorenzoriso (una o di troppo) / lorenzo_riso
+# alessandrocossari    -> prova: alessandro_cossari / alecossari
+# laposhhhhhh          -> numero di 'h' probabilmente errato, cerca: laposh...
+# martinasocrate       -> prova: martina.socrate / martina_socrate
+# annafolzi            -> prova: anna_folzi / anna.folzi
+# awed                 -> prova: awed__ / awedsimo (verifica)
+# tremenoventi         -> prova: tremenoventi_ (verifica)
+# fabiolabaglieri      -> prova: fabiola_baglieri
+# benedettarossi       -> prova: fattoincasadabenedetta (il suo handle noto)
+# emilypallini         -> prova: emily_pallini / emily.pallini
+# martalosito          -> prova: marta_losito / marta.losito
+# federicascagnetti    -> prova: federica_scagnetti
+# shaina               -> handle troppo generico, cerca la versione completa
+# irisferrari          -> prova: iris_ferrari / iris.ferrari
+# andreabianchi        -> nome molto comune, verifica manualmente
+# ritaquingi           -> prova: rita_quingi / ritaquingi_
+# chaimaacherbal       -> prova: chaimaa.cherbal / chaimaa_cherbal
+# zaggia               -> prova: nicolozaggia / zaggia_ (verifica)
+# newmartina           -> prova: new_martina (verifica)
+# angeloduro           -> prova: angelo_duro / angeloduroufficiale
+# edoardotavassi       -> prova: edoardo_tavassi / edoardotavassi_

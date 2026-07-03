@@ -1,0 +1,2 @@
+TikTokApi==7.3.3
+playwright==1.61.0

@@ -1,0 +1,16 @@
+# === SEGRETI: non committare MAI ===
+# Config locale di Claude Code (puo' contenere chiavi/token registrati dai comandi)
+.claude/settings.local.json
+# Sessione TikTok (contiene cookie di sessione, dati sensibili)
+tiktok/tiktok_session.json
+# eventuali altri file di sessione
+**/*session*.json
+
+# Stato quota YouTube (non sensibile, ma locale)
+youtube/youtube_quota.json
+
+# Log e file temporanei dei collector
+**/*.log
+**/_loop.txt
+**/_run.txt
+**/__pycache__/

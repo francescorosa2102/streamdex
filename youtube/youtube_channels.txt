@@ -1,0 +1,102 @@
+# Un canale YouTube per riga: nome<TAB>channel_id
+# Righe con # e righe vuote sono ignorate.
+# L'ordine conta solo se usi GROWTH_SUBSET_MODE='first_n' (vedi collector).
+
+PANDA BOI	UC0Wju2yvRlfwqraLlz5152Q
+SlivkiShow	UCU_yU4xGT9hrVFo6euH8LLw
+Lionfield	UCHwpDpLoyJgtFXoAaaSut4Q
+mercuri_88	UCxuBvuxd7lU7fx-8aactdVA
+Davie504	UCgFvT6pUq9HLOvKBYERzXSQ
+Khaby Lame	UC86suRFnqiw8zN6LIYxddYQ
+Juventus	UCLzKhsxrExAC6yAdtZ-BOWw
+The Quinetto's	UCfZGcP5hn4oIbLb8YZ-e3yw
+Serie A	UCBJeMCIeLQos7wacox4hmLQ
+Born2Kill	UCNpNPMjP5S3qvXnUS0KRepw
+Me contro Te	UCAravTV5JMlA34hSiFeLphQ
+iPantellas	UCD-aXv7CMezGSTfxmKAD6Ag
+Andrea Bocelli	UCN0yeXZgAizy8VhiLj0-tIg
+Masha e Orso	UCSH8CjSBSMnD1gYvTOyjREw
+Tom Sings	UC666C9LIqqKhegz8ROGGuXw
+FavijTV	UCSFC5Cio8zaLQDFPxA7y_HQ
+Magnetic Games	UCwnjkBGhMfrNjDBA3BjwVeA
+Rai	UCKUzdt2sELyxd6mz-bAx3bA
+Warner Music Italy	UC9PZVgJF-mX4aDDzLE4z5Zg
+Maneskin Official	UCgQna2EqpzqzfBjlSmzT72w
+Leonardograti	UCbhFezdRFJHHReiSyNwksnQ
+JMMates	UCgzT6VaCrpF3QLZQa6ZcNcg
+Ameli TVIT	UC9FqpQX13mX-lLBWlTZ6Q0Q
+Film&Clips	UCNT5YLfnn2cQGIxGw8iOxJQ
+WhenGamersFail Lyon	UC1OGV4dczjRz8wNLRaezJ5Q
+WB Kids Italiano	UCSMrqS8IssKKIILuz48IGSA
+Antonio Palmucci	UCUMKhiOBYNgBLUHcXcjj0WA
+HALIDONMUSIC	UCyOfqgtsQaM3S-VZnsYnHjQ
+PANDA GIRL	UC3s2gS8SgIGEETZeHGPKlfg
+Daniele Vitale Sax	UCaQhy_pdgjkcVeh6bIfoVlg
+AS Roma	UCLttSYJ6kPtlcurY96kXkQw
+5 MINUTI CREATIVI	UCYzJ25VqINzsrrdPyBNpbAg
+andrewemily16	UCnwY53ecHQLmzCwLZCvJS-g
+clips mix	UCogFmwd_6QgQ4qZtU2gDDVQ
+St3pNy	UCMggu4tZ2N6SD4FebIbMDpA
+theShow	UCYZ3uwiIy1LrwrAywLeQSlQ
+Arnaldo Mangini	UCoW3NnFgnDATwU9eUOswisg
+Nicsed	UC_5BrHpQhPIcMPngAFVRMkg
+Paky Official	UCF0e4oTaZk9qr0f2qT-dzhw
+RealPenguin	UCkrVUrWINI5n9OyWvYDcrLg
+CiccioGamer89	UC1jTVZboWRPpjGKAN921M5w
+DisneyJuniorIT	UClb8YSegoA2ZRSSXqXlFJaA
+Anima	UCwI4CxLKLyxhPOnIb00z3Gg
+MikeShowSha	UCfZFwPGOpbWk0z0Fk7tU6yA
+Haki asmr	UCcroCdDcJ9CQkbMydKupNUw
+Gabby16bit	UC3VEGA6pJKPsPAHyB3n5BNQ
+kishinpain	UCzG9rE-_zcI0yN5Vvt39M_w
+Fatto in Casa da Benedetta	UCIIe8pQHrmWSzs1i5o3r10w
+Fashion Channel	UCepVy23t8l-CEaASZzfo9Jg
+Fanpage.it	UCWJhBqnyVdHAuxexgjghNFw
+Davidlap	UCdVHWfWPwwiOzMHpcwEATmA
+HeyKids - Canzoni Per Bimbi	UCv1eHXj4h8gRX8DYfFz0Jxg
+Ali Hashem	UC_vvH5uc96CoQHs8e0OLjdg
+Giuseppe Barbuto	UC4-vIn3K0SnmIkreD8KrQ-A
+Oddman Games	UC0hWgcc02QfOJiSZ24c4uKQ
+Ghali	UCL8aaObaUA14kpqkztGfBYA
+ErosRamazzotti	UCxYCtNOdDsR1zVp4qpj2JFA
+Surry	UC3V8twsHOUBGvM_xsQ_4ZJg
+IL LATO POSITIVO	UC-yUaDGthx7mENfSxd81qfg
+Dolci Melodie	UC9WUMVR1jsan7IleT_bolsQ
+Riccardo Dose	UCM3r1mXf1sQRdW3UDz3CLBg
+ilvostrocaroDexter	UCNo7m7faHS9t3nSDfWXvGww
+Two Players One Console	UCpyDd4YbikHZE-DtNGfpdjQ
+Marija Mimi	UCv5D3kIYeNlgiA2vZ0XYdMQ
+Fabrizio Romano	UCX1em-uaFMS02Rrk_Bowyng
+Stella ASMR	UCJ1XeP1hg9K-8XJN9OdApjw
+Disney Kids Italia	UCTLBJ_2dg5G109qFR34wRRA
+GialloZafferano	UC76vuUkGWnPUDFWcgM2_yMg
+Il Rifugio Perfetto	UC6rWB83cxqfb72-HEagGv2Q
+Isabel Giannuzzi	UCVXKdSXb9LASC7H2CRHyPQA
+Baby World and Songs	UCI5HbBYYw47ZCTza_8Hh9BA
+Baby Gang	UCbOpmfgiFaKQc6h1W9bjEWA
+Disney IT	UCBH4HCPqGYZ0Yr6peYP0yag
+Geopop	UCx7EWheHmjCW3vX8K2d09vg
+xMurry	UC6BUG6Odz2ubIFlKK7jgvew
+Marcello Barenghi	UCcBnT6LsxANZjUWqpjR8Jpw
+Zrekun	UCRfWb9_1yYfp9cPvI9GBmzQ
+Laura e Giulia	UCCoSS23vpkBQ64Vyuk2IYIw
+Nickelodeon Italia	UCsHe74knLccbgec6WdGAkPQ
+Feinxy	UCMNFWE0hUtrWPVY0I1qIC4Q
+Asmr With Sasha	UCzp8yn9rUEHL-jqJdSFEONw
+Matteo Pelusi	UCuIn6yReJxMfn1zf7fd-M1Q
+SAFAA	UCLcXeKotX5iu7nIjDUkRUyQ
+Lamborghini	UC9DXZC8BCDOW6pYAQKgozqw
+Awed	UCQQo9hHxHi8gzfFuJSn5-kg
+Ninna e Matti	UCUlp2N-l95H-8a3wHKswVXg
+CoccoleSonore	UCfEcBFEBd8DutdOo8NXpj_w
+Amedeo Preziosi	UCWPU18q799MFtdRMLaJCh7Q
+Scottecs	UCqSmyuqVNwklKKlqqdMmV_A
+DinsiemE	UC0zUezMTgb3yqxwFz2djmYw
+Seamusica Official	UCSvnev6rpHJvGc5Mf2em4GQ
+ricette arabe	UCQ9WFkn0FZwy0EyT5Di-ihg
+Sfera Ebbasta	UC7-K3cpctiu-1pUllHQqkvg
+Planet Records Official	UCCXpJXESxS2GPzteN-s3jrA
+LaSabri	UCsMTpU5UmqPgwZJFPAsSCiQ
+Progetto Happiness	UCCDtBHQGboy9eTvNd_KqfTA
+Gianmarco Zagato	UCIJRzMxARIhYwuLiSG8YVlA
+Sespo	UCMsWbGu0Ahx6c4o0qEbbLmw
