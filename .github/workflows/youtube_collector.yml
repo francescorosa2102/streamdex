@@ -3,9 +3,12 @@ name: YouTube Collector
 # Esegue la raccolta YouTube su schedule (anche a PC spento) e committa il CSV.
 on:
   schedule:
-    # Ogni 20 minuti. NB: GitHub Actions puo' ritardare i job schedulati
-    # (a volte di 10-30 min), soprattutto negli orari di punta: e' normale.
-    - cron: "*/20 * * * *"
+    # Ogni ~20 minuti, ma a minuti "dispari" (9/29/49) invece che su :00/:20/:40:
+    # cosi' si evita la calca dell'ora tonda, dove GitHub accoda milioni di cron
+    # e ritarda/salta le run. NB: le run schedulate restano comunque best-effort:
+    # GitHub puo' ritardarle di 15-45 min o saltarle sotto carico. E' normale,
+    # non e' un errore di configurazione.
+    - cron: "9,29,49 * * * *"
   workflow_dispatch:   # permette anche l'avvio manuale dal tab "Actions"
 
 # Serve per poter committare il CSV aggiornato nel repo.
