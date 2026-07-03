@@ -435,7 +435,9 @@ let allRows = [];
 let tiktokRows = [];
 let youtubeRows = [];
 const TIKTOK_CSV_URL = "tiktok/tiktok_data.csv";
-const YOUTUBE_CSV_URL = "youtube/youtube_data.csv";
+// YouTube gira 24/7 su GitHub Actions: leggiamo il CSV dal repo (link raw),
+// cosi' la pagina mostra dati aggiornati anche a PC spento.
+const YOUTUBE_CSV_URL = "https://raw.githubusercontent.com/francescorosa2102/streamdex/main/youtube/youtube_data.csv";
 let indexRange = 'all';
 let viewersRange = 'all';
 
@@ -776,7 +778,8 @@ function renderTiktok(){
 async function loadYoutube(){
   let text;
   try{
-    text = await fetchCsv(YOUTUBE_CSV_URL);
+    // ?t=... evita la cache CDN di GitHub raw, cosi' prendiamo l'ultimo CSV
+    text = await fetchCsv(YOUTUBE_CSV_URL + "?t=" + Date.now());
   } catch(err){
     console.warn("CSV YouTube non raggiungibile:", err);
     return;
