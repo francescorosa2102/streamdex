@@ -317,6 +317,22 @@
   <div class="panel">
     <div class="panel-head">
       <div>
+        <div class="panel-title">Andamento dell'indice TikTok</div>
+        <div class="panel-sub">TIKTOK_INDICE_FINALE nel tempo</div>
+      </div>
+      <div class="range-tabs" id="rangeTabsTiktok">
+        <button class="range-tab" data-range="24h">24 ore</button>
+        <button class="range-tab" data-range="3d">3 giorni</button>
+        <button class="range-tab" data-range="7d">7 giorni</button>
+        <button class="range-tab active" data-range="all">Dall'inizio</button>
+      </div>
+    </div>
+    <div class="chart-holder"><canvas id="tiktokChart"></canvas></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <div>
         <div class="panel-title">Account monitorati</div>
         <div class="panel-sub">Follower, variazione sulla rilevazione precedente ed engagement medio</div>
       </div>
@@ -324,16 +340,6 @@
     <div class="tt-table" id="ttAccounts">
       <div class="tt-row"><div class="tt-dim">Caricamento dati TikTok…</div></div>
     </div>
-  </div>
-
-  <div class="panel">
-    <div class="panel-head">
-      <div>
-        <div class="panel-title">Andamento dell'indice TikTok</div>
-        <div class="panel-sub">TIKTOK_INDICE_FINALE nel tempo</div>
-      </div>
-    </div>
-    <div class="chart-holder"><canvas id="tiktokChart"></canvas></div>
   </div>
 
   </section>
@@ -368,6 +374,22 @@
   <div class="panel">
     <div class="panel-head">
       <div>
+        <div class="panel-title">Andamento dell'indice YouTube</div>
+        <div class="panel-sub">YOUTUBE_INDICE_FINALE nel tempo</div>
+      </div>
+      <div class="range-tabs" id="rangeTabsYoutube">
+        <button class="range-tab" data-range="24h">24 ore</button>
+        <button class="range-tab" data-range="3d">3 giorni</button>
+        <button class="range-tab" data-range="7d">7 giorni</button>
+        <button class="range-tab active" data-range="all">Dall'inizio</button>
+      </div>
+    </div>
+    <div class="chart-holder"><canvas id="youtubeChart"></canvas></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <div>
         <div class="panel-title">Canali per crescita</div>
         <div class="panel-sub">Ordinati per velocità di crescita sui video recenti (views/giorno)</div>
       </div>
@@ -375,16 +397,6 @@
     <div class="tt-table" id="ytChannels">
       <div class="tt-row"><div class="tt-dim">Caricamento dati YouTube…</div></div>
     </div>
-  </div>
-
-  <div class="panel">
-    <div class="panel-head">
-      <div>
-        <div class="panel-title">Andamento dell'indice YouTube</div>
-        <div class="panel-sub">YOUTUBE_INDICE_FINALE nel tempo</div>
-      </div>
-    </div>
-    <div class="chart-holder"><canvas id="youtubeChart"></canvas></div>
   </div>
 
   </section>
@@ -440,6 +452,8 @@ const TIKTOK_CSV_URL = "tiktok/tiktok_data.csv";
 const YOUTUBE_CSV_URL = "https://raw.githubusercontent.com/francescorosa2102/streamdex/main/youtube/youtube_data.csv";
 let indexRange = 'all';
 let viewersRange = 'all';
+let tiktokRange = 'all';
+let youtubeRange = 'all';
 
 function parseItalianDate(s){
   const [datePart, timePart] = s.trim().split(" ");
@@ -521,6 +535,15 @@ function filterByRange(rows, range){
   const spans = { '24h': 24*60*60*1000, '3d': 3*24*60*60*1000, '7d': 7*24*60*60*1000 };
   const cutoff = last.getTime() - spans[range];
   return rows.filter(r => parseItalianDate(r['data_ora']).getTime() >= cutoff);
+}
+
+// come filterByRange ma su punti-serie gia' costruiti (ognuno con .t = Date)
+function filterPointsByRange(points, range){
+  if (range === 'all' || points.length === 0) return points;
+  const last = points[points.length - 1].t.getTime();
+  const spans = { '24h': 24*60*60*1000, '3d': 3*24*60*60*1000, '7d': 7*24*60*60*1000 };
+  const cutoff = last - spans[range];
+  return points.filter(p => p.t.getTime() >= cutoff);
 }
 
 function renderAll(){
@@ -625,7 +648,7 @@ function initCharts(){
   });
 }
 
-function wireRangeTabs(tabsId, onSelect){
+function wireRangeTabs(tabsId, onSelect, rerender){
   const tabs = document.getElementById(tabsId);
   tabs.addEventListener('click', (e) => {
     const btn = e.target.closest('.range-tab');
@@ -633,12 +656,14 @@ function wireRangeTabs(tabsId, onSelect){
     tabs.querySelectorAll('.range-tab').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     onSelect(btn.dataset.range);
-    renderCharts();
+    (rerender || renderCharts)();
   });
 }
 
 wireRangeTabs('rangeTabs', (range) => { indexRange = range; });
 wireRangeTabs('rangeTabsViewers', (range) => { viewersRange = range; });
+wireRangeTabs('rangeTabsTiktok', (range) => { tiktokRange = range; }, renderTiktok);
+wireRangeTabs('rangeTabsYoutube', (range) => { youtubeRange = range; }, renderYoutube);
 
 /* ===================== TikTok ===================== */
 async function loadTiktok(){
@@ -771,7 +796,8 @@ function renderTiktok(){
   document.getElementById('ttLastUpdate').textContent =
     "Ultima rilevazione — " + fmtTime(latest.t);
 
-  updateChart(tiktokChart, points.map(p => fmtTime(p.t)), points.map(p => p.index));
+  const chartPts = filterPointsByRange(points, tiktokRange);
+  updateChart(tiktokChart, chartPts.map(p => fmtTime(p.t)), chartPts.map(p => p.index));
 }
 
 /* ===================== YouTube ===================== */
@@ -890,7 +916,8 @@ function renderYoutube(){
   document.getElementById('ytLastUpdate').textContent =
     "Ultima rilevazione — " + fmtTime(latest.t);
 
-  updateChart(youtubeChart, points.map(p => fmtTime(p.t)), points.map(p => p.index));
+  const chartPts = filterPointsByRange(points, youtubeRange);
+  updateChart(youtubeChart, chartPts.map(p => fmtTime(p.t)), chartPts.map(p => p.index));
 }
 
 /* ===================== Navigazione a schede ===================== */
